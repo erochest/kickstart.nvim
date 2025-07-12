@@ -800,7 +800,7 @@ require('lazy').setup({
     },
   },
 
-  { -- Autocompletion
+  { -- Autocompmini.trailspace
     'saghen/blink.cmp',
     event = 'VimEnter',
     version = '1.*',
@@ -917,7 +917,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      -- vim.cmd.colorscheme 'tokyonight-night'
     end,
   },
 
@@ -956,6 +956,24 @@ require('lazy').setup({
       statusline.section_location = function()
         return '%2l:%-2v'
       end
+
+      -- TODO: keymap to create a session with `MiniSessions.write()`
+      require('mini.sessions').setup {}
+
+      -- TODO: recent files keymap
+      require('mini.visits').setup {}
+
+      require('mini.jump2d').setup {}
+
+      -- TODO: try this out
+      -- require('mini.files').setup {}
+
+      require('mini.animate').setup {}
+
+      require('mini.tabline').setup {}
+
+      -- TODO: keybindings
+      require('mini.trailspace').setup {}
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
@@ -1034,6 +1052,12 @@ require('lazy').setup({
     },
   },
 })
+
+-- TODO: loading screen
+-- TODO: previous buffer keymap
+-- TODO: better whichkey hints
+-- TODO: lsp keybindings
+-- TODO: surround
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
