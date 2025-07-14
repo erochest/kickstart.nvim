@@ -1,3 +1,4 @@
+-- TODO: keybindings to open this
 return {
   {
     'stevearc/oil.nvim',
